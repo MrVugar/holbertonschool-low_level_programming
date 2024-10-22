@@ -1,22 +1,20 @@
 #include "main.h"
 
 /**
- * print_last_digit - bir ədədin sonuncu rəqəmini çap edir.
- * @n: sonuncu rəqəmi çap olunacaq ədəd.
+ * print_last_digit - prints the last digit of a number
+ * @n: the number to be processed
  *
- * Return: sonuncu rəqəm.
+ * Return: the value of the last digit
  */
 int print_last_digit(int n)
 {
     int last_digit;
 
-    last_digit = n % 10;  /* Sonuncu rəqəmi tapır */
+    if (n < 0)
+        n = -n; /* Convert to positive if negative */
 
-    if (last_digit < 0)
-    {
-        last_digit = -last_digit;  /* Müsbətə çevir */
-    }
+    last_digit = n % 10; /* Get the last digit */
+    _putchar(last_digit + '0'); /* Print the last digit */
 
-    _putchar(last_digit + '0');  /* Rəqəmi çap et */
-    return (last_digit);
+    return (last_digit); /* Return the last digit */
 }
