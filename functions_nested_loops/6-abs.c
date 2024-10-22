@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * _abs - bir tam ədədin mütləq dəyərini hesablayır.
- * @n: mütləq dəyəri hesablanacaq ədəd.
+ * _abs - computes the absolute value of an integer
+ * @n: the integer to be computed
  *
- * Return: mütləq dəyər.
+ * Return: the absolute value of the integer
  */
 int _abs(int n)
 {
@@ -12,5 +12,8 @@ int _abs(int n)
     {
         return (-n);
     }
-    return (n);
+    else
+    {
+        return (n);
+    }
 }

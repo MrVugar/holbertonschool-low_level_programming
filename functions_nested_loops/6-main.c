@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * main - kodu yoxlayır.
+ * main - check the code
  *
- * Return: Həmişə 0.
+ * Return: Always 0.
  */
 int main(void)
 {
@@ -18,6 +18,6 @@ int main(void)
     printf("%d\n", r);
     r = _abs(-98);
     printf("%d\n", r);
-    
     return (0);
 }
+
