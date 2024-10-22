@@ -6,8 +6,9 @@
 void print_alphabet(void)
 {
     char alphabet[] = "abcdefghijklmnopqrstuvwxyz\n";
+    int i;  /* Döngə dəyişəni for döngəsindən əvvəl təyin olunur */
 
-    for (int i = 0; i < 27; i++)
+    for (i = 0; i < 27; i++)
     {
         _putchar(alphabet[i]);
     }
