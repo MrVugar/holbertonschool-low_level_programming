@@ -2,11 +2,9 @@
 
 /**
  * print_sign - bir ədədin işarəsini çap edir.
- * @n: yoxlanacaq ədəd.
+ * @n: yoxlanılacaq ədəd.
  *
- * Return: n sıfırdan böyükdüsə 1 və '+' çap edir,
- *         n sıfıra bərabərdirsə 0 və '0' çap edir,
- *         n sıfırdan kiçikdirsə -1 və '-' çap edir.
+ * Return: 1 (müsbət), 0 (sıfır), -1 (mənfi).
  */
 int print_sign(int n)
 {
