@@ -1,20 +1,22 @@
 #include "main.h"
 
 /**
- * print_alphabet_x10 - prints the alphabet 10 times in lowercase, 
- * followed by a new line each time
+ * print_alphabet_x10 - kiçik hərflərlə əlifbanı 10 dəfə çap edir
+ *
+ * Return: Heç bir şey qaytarmır
  */
 void print_alphabet_x10(void)
 {
-	char alphabet[] = "abcdefghijklmnopqrstuvwxyz\n";
-	int i, j;
+    int count;
+    char letter;
 
-	for (i = 0; i < 10; i++)  /* 10 dəfə əlifbanı çap etmək üçün */
-	{
-		for (j = 0; j < 27; j++)  /* əlifbanı və yeni sətiri çap etmək üçün */
-		{
-			_putchar(alphabet[j]);
-		}
-	}
+    for (count = 0; count < 10; count++)
+    {
+        for (letter = 'a'; letter <= 'z'; letter++)
+        {
+            _putchar(letter);
+        }
+        _putchar('\n');
+    }
+
 }
-
