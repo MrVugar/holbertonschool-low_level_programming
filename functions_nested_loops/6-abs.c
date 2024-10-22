@@ -8,9 +8,9 @@
  */
 int _abs(int n)
 {
-    if (n < 0)
-    {
-        return (-n); /* Əgər n mənfidirsə, onun müsbət dəyərini qaytar */
-    }
-    return (n); /* Əks halda, n-in dəyərini qaytar */
+	if (n < 0)
+	{
+		return (-n); /* Əgər n mənfidirsə, onun müsbət dəyərini qaytar */
+	}
+	return (n); /* Əks halda, n-in dəyərini qaytar */
 }
