@@ -14,7 +14,10 @@ int print_last_digit(int n)
 		n = -n; /* Mənfi ədədin müsbət dəyərinə keçir */
 
 	last_digit = n % 10; /* Son rəqəmi tapır */
+
+	if (last_digit < 0) /* Mənfi son rəqəm üçün */
+		last_digit = -last_digit;
+
 	_putchar('0' + last_digit); /* Son rəqəmi çap edir */
 	return (last_digit); /* Son rəqəmi qaytarır */
 }
-
