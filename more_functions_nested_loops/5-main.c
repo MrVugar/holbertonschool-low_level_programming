@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * main - Check the code.
  *
  * Return: Always 0.
  */
 int main(void)
 {
-    more_numbers();
+    more_numbers(); /* Call the function to print numbers */
     return (0);
 }
