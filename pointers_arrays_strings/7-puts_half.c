@@ -10,25 +10,28 @@
  */
 void puts_half(char *str)
 {
-    int i, len = 0;
+	int i, len = 0;
 
-    while (str[len] != '\0')
-    {
-        len++;
-    }
+	/* Calculate the length of the string */
+	while (str[len] != '\0')
+	{
+		len++;
+	}
 
-    if (len % 2 == 0)
-    {
-        i = len / 2;
-    }
-    else
-    {
-        i = (len - 1) / 2 + 1;
-    }
+	/* Determine the starting point for printing */
+	if (len % 2 == 0)
+	{
+		i = len / 2;  /* Even length */
+	}
+	else
+	{
+		i = (len - 1) / 2 + 1;  /* Odd length */
+	}
 
-    for (; str[i] != '\0'; i++)
-    {
-        _putchar(str[i]);
-    }
-    _putchar('\n');
+	/* Print the second half of the string */
+	for (; str[i] != '\0'; i++)
+	{
+		_putchar(str[i]);
+	}
+	_putchar('\n');
 }
