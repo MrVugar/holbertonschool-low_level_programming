@@ -7,18 +7,18 @@
  */
 void more_numbers(void)
 {
-    int i, j;
+	int i, j;
 
-    for (j = 0; j < 10; j++)
-    {
-        for (i = 0; i <= 14; i++)
-        {
-            if (i >= 10)
-            {
-                _putchar('1'); /* Print tens digit */
-            }
-            _putchar(i % 10 + '0'); /* Print units digit */
-        }
-        _putchar('\n'); /* Print newline after each row */
-    }
+	for (j = 0; j < 10; j++)
+	{
+		for (i = 0; i <= 14; i++)
+		{
+			if (i >= 10)
+			{
+				_putchar('1'); /* Print tens digit */
+			}
+			_putchar(i % 10 + '0'); /* Print units digit */
+		}
+		_putchar('\n'); /* Print newline after each row */
+	}
 }
