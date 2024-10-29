@@ -2,17 +2,27 @@
 #include <stdio.h>
 
 /**
- * main - kodu yoxlayır
+ * main - Kodu yoxlayır
  *
- * Return: Həmişə 0.
+ * Return: Həmişə 0 qaytarır
  */
 int main(void)
 {
-    int n;
+	char s1[98] = "Hello ";
+	char s2[] = "World!\n";
+	char *ptr;
 
-    n = 402;
-    printf("n=%d\n", n);
-    reset_to_98(&n);
-    printf("n=%d\n", n);
-    return (0);
+	/* Əvvəlcə s1 və s2 çap edirik */
+	printf("%s\n", s1);
+	printf("%s", s2);
+
+	/* s1 və s2 birləşdirilir */
+	ptr = _strcat(s1, s2);
+
+	/* Birləşdirilmiş nəticələri çap edirik */
+	printf("%s", s1);
+	printf("%s", s2);
+	printf("%s", ptr);
+
+	return (0);
 }
