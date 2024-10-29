@@ -16,7 +16,7 @@ char *_strncpy(char *dest, char *src, int n)
 	for (i = 0; i < n && src[i] != '\0'; i++)
 		dest[i] = src[i];
 
-	/* Əgər src n-dən az simvola malikdirsə, qalan yerləri null ilə doldururuq */
+	/* Əgər src n-dla malikdirsə, qalan yerləri null ilə doldururuq */
 	for (; i < n; i++)
 		dest[i] = '\0';
 
