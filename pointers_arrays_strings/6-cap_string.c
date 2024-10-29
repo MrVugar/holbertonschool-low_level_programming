@@ -8,28 +8,28 @@
  */
 char *cap_string(char *str)
 {
-    int i;
-    int capitalize = 1;
+	int i;
+	int capitalize = 1; /* Flag to check if the next character should be capitalized */
 
-    for (i = 0; str[i] != '\0'; i++)
-    {
-        if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
-            str[i] == ',' || str[i] == ';' || str[i] == '.' ||
-            str[i] == '!' || str[i] == '?' || str[i] == '"' ||
-            str[i] == '(' || str[i] == ')' || str[i] == '{' ||
-            str[i] == '}')
-        {
-            capitalize = 1;
-        }
-        else if (capitalize)
-        {
-            if (str[i] >= 'a' && str[i] <= 'z')
-            {
-                str[i] -= ('a' - 'A');
-            }
-            capitalize = 0;
-        }
-    }
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
+		    str[i] == ',' || str[i] == ';' || str[i] == '.' ||
+		    str[i] == '!' || str[i] == '?' || str[i] == '"' ||
+		    str[i] == '(' || str[i] == ')' || str[i] == '{' ||
+		    str[i] == '}')
+		{
+			capitalize = 1; /* Next character should be capitalized */
+		}
+		else if (capitalize)
+		{
+			if (str[i] >= 'a' && str[i] <= 'z')
+			{
+				str[i] -= ('a' - 'A'); /* Convert to uppercase */
+			}
+			capitalize = 0; /* Reset flag */
+		}
+	}
 
-    return (str);
+	return (str);
 }
