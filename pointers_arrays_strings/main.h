@@ -20,6 +20,7 @@ void reverse_array(int *a, int n);
 void print_array(int *a, int n);
 char *string_toupper(char *str);
 char *cap_string(char *str);
+char *leet(char *);
 int _putchar(char c);
 
 #endif /* MAIN_H */
