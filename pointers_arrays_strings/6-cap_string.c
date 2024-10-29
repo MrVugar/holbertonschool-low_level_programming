@@ -9,7 +9,7 @@
 char *cap_string(char *str)
 {
 	int i;
-	int capitalize = 1; /* Flag to check if the next character should be capitalized */
+	int capitalize = 1; /* Flag to check if the next cha be capitalized */
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
