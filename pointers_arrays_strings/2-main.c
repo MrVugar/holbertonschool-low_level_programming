@@ -2,47 +2,20 @@
 #include <stdio.h>
 
 /**
- * main - Kodu yoxlayır
+ * main - check the code
  *
- * Return: Həmişə 0 qaytarır
+ * Return: Always 0.
  */
 int main(void)
 {
-	char s1[98];
-	char *ptr;
-	int i;
+    char *s = "hello";
+    char *f;
 
-	/* s1 massivinin hər bir elementini * simvolu ilə doldururuq */
-	for (i = 0; i < 98 - 1; i++)
-	{
-		s1[i] = '*';
-	}
-	s1[i] = '\0';
-	printf("%s\n", s1);
+    f = _strchr(s, 'l');
 
-	/* s1-ə 5 simvol kopyalayırıq */
-	ptr = _strncpy(s1, "First, solve the problem. Then, write the code\n", 5);
-	printf("%s\n", s1);
-	printf("%s\n", ptr);
-
-	/* s1-ə bütün mənbə sətirini kopyalayırıq */
-	ptr = _strncpy(s1, "First, solve the problem. Then, write the code\n", 90);
-	printf("%s", s1);
-	printf("%s", ptr);
-
-	/* s1 massivinin hər bir elementini hex şəklində çap edirik */
-	for (i = 0; i < 98; i++)
-	{
-		if (i % 10)
-		{
-			printf(" ");
-		}
-		if (!(i % 10) && i)
-		{
-			printf("\n");
-		}
-		printf("0x%02x", s1[i]);
-	}
-	printf("\n");
-	return (0);
+    if (f != NULL)
+    {
+        printf("%s\n", f);
+    }
+    return (0);
 }
