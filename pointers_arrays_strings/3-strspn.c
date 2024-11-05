@@ -1,35 +1,57 @@
 #include "main.h"
 
 /**
- * _strspn - Gets the length of a prefix substring
- * @s: The string to be searched
- * @accept: The prefix substring to match against
- *
- * Return: The number of bytes in the initial segment of s
- *         which consist only of bytes from accept
+ * _strspn - return length of string that matches values consistently
+ * @s: string to search
+ * @accept: target matches
+ * Return: number of bytes consecutively matched
  */
+
 unsigned int _strspn(char *s, char *accept)
 {
-    unsigned int count = 0;
-    int i, j;
-    int found;
+	int i = 0, j;
+	int matches = 0;
 
-    for (i = 0; s[i] != '\0'; i++)
-    {
-        found = 0;
-        for (j = 0; accept[j] != '\0'; j++)
-        {
-            if (s[i] == accept[j])
-            {
-                found = 1;
-                break;
-            }
-        }
-        if (found == 0)
-        {
-            break;
-        }
-        count++;
-    }
-    return (count);
+	while (s[i] != '\0') /*iterate through string*/
+	{
+
+		for (j = 0; accept[j] != '\0'; j++) /*iterate through target*/
+		{
+			if (s[i] == accept[j]) /*record & break at first match*/
+			{
+				matches++;
+				break;
+			}
+			if (accept[j + 1] == '\0' && s[i] != accept[j])
+				return (matches);/*return if idx doesn't match*/
+		}
+		i++;
+	}
+	return (matches); /* return num if all match till end */
+
 }
+
+/* pointer arithmetic version
+
+unsigned int _strspn(char *s, char *accept)
+{
+	int i = 0, j;
+	int matches = 0;
+
+	while (*(s + i))
+	{
+		for (j = 0; *(accept + j); j++)
+		{
+			if (*(s + i) == *(accept + j))
+			{
+				matches++;
+				break;
+			}
+			if (*(accept + j + 1) == '\0' && *(s + i) != *(accept + j))
+				return (matches);
+		}
+		i++;
+	}
+	return (matches);
+}
+*/
