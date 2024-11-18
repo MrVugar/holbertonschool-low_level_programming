@@ -1,28 +1,35 @@
-#include "main.h"
+/*
+ * File: 0-create_array.c
+ * Auth: Brennan D Baraban
+ */
+
+#include "holberton.h"
 #include <stdlib.h>
 
 /**
- * create_array - Char massiv yaradır və onu müəyyən char ilə doldurur.
- * @size: Massivin ölçüsü.
- * @c: Massivi doldurmaq üçün istifadə olunan char.
+ * create_array - Creates an array of chars and
+ *                initializes it with a specific char.
+ * @size: The size of the array to be initialized.
+ * @c: The specific char to intialize the array with.
  *
- * Return: Massivin göstəricisi və ya əgər size 0-dırsa və ya yaddaş ayrılması
- * uğursuz olarsa, NULL qaytarır.
+ * Return: If size == 0 or the function fails - NULL.
+ *         Otherwise - a pointer to the array.
  */
 char *create_array(unsigned int size, char c)
 {
 	char *array;
-	unsigned int i;
+	unsigned int index;
 
 	if (size == 0)
 		return (NULL);
 
-	array = malloc(size * sizeof(char));
+	array = malloc(sizeof(char) * size);
+
 	if (array == NULL)
 		return (NULL);
 
-	for (i = 0; i < size; i++)
-		array[i] = c;
+	for (index = 0; index < size; index++)
+		array[index] = c;
 
 	return (array);
 }
